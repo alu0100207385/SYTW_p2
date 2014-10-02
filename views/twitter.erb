@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="/bootstrap.min.css" rel="stylesheet">
+		<link href="/bootstrap.css" rel="stylesheet">
+		<link href="/my_style.css" rel="stylesheet">
+		<title>APP Twitter </title>
+
+	</head>
+	<style type="text/css">
+		body { 
+		  background: url(http://wallpapers.org.es/wp-content/uploads/2013/01/wallpaper_sencillo_de_dibujo_de_nubes-1024x640.jpeg) repeat center center fixed; 	  
+		  -webkit-background-size: cover;
+		  -moz-background-size: cover;
+		  -o-background-size: cover;
+		  background-size: cover;
+		  
+		  }
+		#piepagina2
+       {
+        color: white;
+        height: 50%;
+        position: relative;
+        margin-top: 10%;
+        text-align: left;
+        }
+        a{
+        color:black;
+        }
+        a:hover{
+        color:white
+        }
+        
+        </style>
+	<body>
+  <div class="container">
+				<div id="cabecera">
+	 		
+	 			<p><img src="twitterenformacion.png" alt="" style="width:125px;height:100px;">
+	 			<b>Amigos más populares de Twitter</b>
+	 			</p>
+	 	        </div>
+	 	    
+	 <div class="row">
+	     <div class="col-md-6">
+			  <div class="panel panel-info">
+						<div class="panel-heading">
+							Introduzca los datos de la búsqueda
+						</div>
+			   <div id="ri">
+		 	       <form action="/" method="post">
+          
+                <p><b>Introduzca el nombre de Twitter: </b></p><input type="text" name="firstname" placeholder="Nombre" value="" autofocus>
+		        <br><br>
+		        <p><b>¿Cuántos amigos desea mostrar? </b></p><input type="text" name="n" placeholder="Número entre 1 y 10">
+		   		   		
+		   		     <div id="button">
+		   		         
+		   	     		<br><p><button type="submit" class="btn btn-primary btn-lg">Enviar</button></p></br> 
+	                 </div>
+	            </div>
+		      </form>
+		      </div>
+		   </div>   	    
+		 	
+	
+           <div class="col-md-6">
+			<% if @name != ''%>
+				
+				<div id="ri">
+				  <p><b> Usuario <i><%= @name %></i></b></p>
+				<p><img src=<%= @img %> alt="prueba" style="width:auto;height:auto;"></p>
+				<p>Sus amigos más populares son:</p>
+				<ol>
+					<% @amigos.each do |i| %> 
+						<li id="col"><%= i %><br></li>
+					<% end %>
+				</ol>
+			<%end %>
+			</div>
+			
+			 <p><b><% if @name != ''%></b></p>
+			
+				<%if @number_aux>10%>
+					<p id="warning"> Sólo se puede mostrar hasta 10 amigos </p>
+				<%elsif @amigos.length < 1 %>
+					<p id="warning">El usuario no existe o no tiene amigos</p>
+				<%elsif @amigos.length < @number %>
+					<p id="warning">El usuario tiene menos de <%= @number%> amigos</p>
+				<%end%>
+			<%end%>
+           </div>
+        </div>
+    </div>
+        
+<p>
+    <div id="piepagina2">
+        <a href='https://github.com/alu0100537451'><img src="http://civicio.files.wordpress.com/2013/03/github.png?w=256&h=256" alt="github" width='50' height='50'class="img-rounded">Aaron José Vera Cerdeña</a>
+        <a href='http://www.twitter.com'><img src="http://www.unican.es/NR/rdonlyres/E1ECB4AC-D9F7-4CA9-B152-5EDC8E65D553/98454/twitteric.png" alt="github" width='50' height='50'class="img-rounded"></a>
+        <a href='https://github.com/alu0100207385'>Aaron Socas Gaspar<img src="http://civicio.files.wordpress.com/2013/03/github.png?w=256&h=256" alt="github" width='50' height='50'class="img-rounded"></a>
+      </div>
+</p>	
+   </div>
+	</body>
+</html>

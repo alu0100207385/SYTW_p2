@@ -5,3 +5,8 @@ desc "Realizar tests (default)"
 task :test do
   sh "ruby tests/test.rb"
 end
+
+desc "Iniciar servidor"
+task :server do
+ sh "ruby twitter.rb"
+end
