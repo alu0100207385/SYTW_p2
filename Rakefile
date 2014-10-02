@@ -21,3 +21,9 @@ desc "Ejecutar la aplicación desde consola: bin[nombre_usuario, numero_seguidor
 task :bin, [:arg1, :arg2] do |t, args|
     sh "ruby popular.rb #{args.arg1} #{args.arg2}"
 end
+
+desc "Generar documentación en html"
+task :html do
+  sh "kramdown Readme.md > Readme.html"
+  sh "sed -i '1i <meta charset='utf-8'>' documentation.html"
+end
