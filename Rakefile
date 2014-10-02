@@ -32,3 +32,8 @@ desc "Abrir la App en Heroku"
 task :heroku do
   sh "heroku open"
 end
+
+desc "Ver documentación"
+task :doc do
+  sh "gnome-open http://alu0100207385.github.io/SYTW_p2 &"
+end

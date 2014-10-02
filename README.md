@@ -49,6 +49,10 @@ Las opciones posibles son:
 6. rake test         # Realizar tests (default)
 `
 
+`
+7. rake doc          # Ver documentacion
+`
+
 
 ###1. rake bin
 
@@ -80,6 +84,10 @@ Y rellenamos los campos. Una vez terminado Ctrl+C para detener el servidor.
 ###6. rake (=rake test) (default)
 
 Ejecutar los tests.
+
+###7. rake doc
+
+Accede a la documentación html.
 
 
 
