@@ -49,4 +49,34 @@ describe "Amigos Twitter App" do
       obj.number.must_equal 10
     end
   end
+  
+  describe "Resultados" do
+    it "Longitud de la lista" do
+	@lista.length.must_equal 3
+    end
+    
+    it "Listado obtenido" do
+	lista_aux = @ultimos_t.map{|i| [i.name]}
+	lista_aux = lista_aux.take(@n)
+        lista_aux.must_equal [["Jazer Abreu"], ["ULL"], ["FundaciónGeneral ULL"]]
+    end
+  end
+  
+  describe "Pruebas en la web" do
+    it "Acceso a la pagina" do
+      get '/'
+      assert last_response.ok?
+    end
+    
+    it "Campo NOMBRE" do
+      get '/'
+      assert last_response.body.include?("Introduzca el nombre de Twitter:")
+    end
+    
+    it "Campo N_AMIGOS" do
+      get '/'
+      assert last_response.body.include?("¿Cuántos amigos desea mostrar?")
+    end
+  end
+
 end
