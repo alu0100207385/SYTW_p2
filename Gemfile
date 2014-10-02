@@ -6,8 +6,3 @@ gem "sinatra"
 gem "thin"
 gem "json"
 gem 'rake'
-
-group :test do
- gem "rack-text"
- gem "rake"
-end

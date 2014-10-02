@@ -27,3 +27,8 @@ task :html do
   sh "kramdown Readme.md > Readme.html"
   sh "sed -i '1i <meta charset='utf-8'>' documentation.html"
 end
+
+desc "Abrir la App en Heroku"
+task :heroku do
+  sh "heroku open"
+end
