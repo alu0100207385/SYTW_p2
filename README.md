@@ -30,16 +30,25 @@ Las opciones posibles son:
 `
 
 `
-2. rake s            # Arrancar y abrir la aplicación web
+2. rake heroku       # Abrir la App en Heroku 
 `
 
 `
-3. rake server       # Iniciar servidor
+3. rake html         # Generar documentación en html
 `
 
 `
-4. rake test            # Realizar tests (default)
+4. rake s            # Arrancar y abrir la aplicación web
 `
+
+`
+5. rake server       # Iniciar servidor
+`
+
+`
+6. rake test         # Realizar tests (default)
+`
+
 
 ###1. rake bin
 
@@ -50,19 +59,28 @@ nombre de usuario "AaronSocas" y como número amigos 3. Para usar argumentos:
 $ bin[nombre_usuario, numero_seguidores]
 `
 
-###2. rake s
+###2. rake heroku
+
+Lanza la aplicacion en Heroku.
+
+###3. rake html
+
+Genera documentacion en html.
+
+###4. rake s
 
 Arrancar y abre la aplicación web en el navegador por defecto (Linux).
 
-###3. rake server
+###5. rake server
 
 Iniciar servidor usando el puerto por defecto 4567. Accedemos a:`http://localhost:4567/`
 
 Y rellenamos los campos. Una vez terminado Ctrl+C para detener el servidor.
 
-###4. rake (=rake test) (default)
+###6. rake (=rake test) (default)
 
 Ejecutar los tests.
+
 
 
 ##Recursos
