@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Sytw p2 by alu0100207385</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Sytw p2</h1>
+          <h2>Despliegue en Heroku la práctica SYTW_p1</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/alu0100207385/SYTW_p2/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/alu0100207385/SYTW_p2/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/alu0100207385/SYTW_p2" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>
+<a name="sistemas-y-tecnolog%C3%ADas-web-ejemplo-de-oauth-twitter-rest-y-sinatra" class="anchor" href="#sistemas-y-tecnolog%C3%ADas-web-ejemplo-de-oauth-twitter-rest-y-sinatra"><span class="octicon octicon-link"></span></a>Sistemas y Tecnologías Web: Ejemplo de OAuth, Twitter, Rest y Sinatra</h1>
+
+<p><strong>Autores: Aarón Socas Gaspar &amp;&amp; Aarón José Vera Cerdeña</strong></p>
+
+<h2>
+<a name="descripci%C3%B3n" class="anchor" href="#descripci%C3%B3n"><span class="octicon octicon-link"></span></a>Descripción</h2>
+
+<p>Despliegue en Heroku la práctica Aplicación Web con Sinatra: Contar la Popularidad de Nuestros 
+Amigos en Twitter, para más <a href="https://github.com/alu0100207385/SYTW_p1">detalle</a>.</p>
+
+<p>Añada pruebas. Usar los issues de GitHub para documentar el histórico de desarrollo. </p>
+
+<h2>
+<a name="instalaci%C3%B3n" class="anchor" href="#instalaci%C3%B3n"><span class="octicon octicon-link"></span></a>Instalación</h2>
+
+<p>Como en la práctica anterior...</p>
+
+<ol>
+<li>Instalaremos las gemas necesarias: <code>bundle install</code>
+</li>
+<li>Podemos usar el archivo <code>configure.rb</code> que se proporciona o configuraremos nuestro propio fichero <code>configure.rb</code> siguiendo las directrices del fichero <code>configure.rb.example</code>
+Para más detalle <a href="http://nereida.deioc.ull.es/%7Elpp/perlexamples/node39.html">consultar</a> .</li>
+</ol><h2>
+<a name="ejecuci%C3%B3n" class="anchor" href="#ejecuci%C3%B3n"><span class="octicon octicon-link"></span></a>Ejecución</h2>
+
+<p>Mantenemos algunas opciones del programa anterior a las que hemos incluido los tests. Con el comando <code>$ rake -T</code> podemos ver las opciones posibles.
+Las opciones posibles son:</p>
+
+<p><code>
+1. rake bin[arg1,arg2]  # Ejecutar la aplicación desde consola
+</code></p>
+
+<p><code>
+2. rake heroku       # Abrir la App en Heroku 
+</code></p>
+
+<p><code>
+3. rake html         # Generar documentación en html
+</code></p>
+
+<p><code>
+4. rake s            # Arrancar y abrir la aplicación web
+</code></p>
+
+<p><code>
+5. rake server       # Iniciar servidor
+</code></p>
+
+<p><code>
+6. rake test         # Realizar tests (default)
+</code></p>
+
+<h3>
+<a name="1-rake-bin" class="anchor" href="#1-rake-bin"><span class="octicon octicon-link"></span></a>1. rake bin</h3>
+
+<p>Nos permite ejecutar el programa desde consola. Puede usarse sin argumentos, por defecto utiliza como 
+nombre de usuario "AaronSocas" y como número amigos 3. Para usar argumentos:</p>
+
+<p><code>
+$ bin[nombre_usuario, numero_seguidores]
+</code></p>
+
+<h3>
+<a name="2-rake-heroku" class="anchor" href="#2-rake-heroku"><span class="octicon octicon-link"></span></a>2. rake heroku</h3>
+
+<p>Lanza la aplicacion en Heroku.</p>
+
+<h3>
+<a name="3-rake-html" class="anchor" href="#3-rake-html"><span class="octicon octicon-link"></span></a>3. rake html</h3>
+
+<p>Genera documentacion en html.</p>
+
+<h3>
+<a name="4-rake-s" class="anchor" href="#4-rake-s"><span class="octicon octicon-link"></span></a>4. rake s</h3>
+
+<p>Arrancar y abre la aplicación web en el navegador por defecto (Linux).</p>
+
+<h3>
+<a name="5-rake-server" class="anchor" href="#5-rake-server"><span class="octicon octicon-link"></span></a>5. rake server</h3>
+
+<p>Iniciar servidor usando el puerto por defecto 4567. Accedemos a:<code>http://localhost:4567/</code></p>
+
+<p>Y rellenamos los campos. Una vez terminado Ctrl+C para detener el servidor.</p>
+
+<h3>
+<a name="6-rake-rake-test-default" class="anchor" href="#6-rake-rake-test-default"><span class="octicon octicon-link"></span></a>6. rake (=rake test) (default)</h3>
+
+<p>Ejecutar los tests.</p>
+
+<h2>
+<a name="recursos" class="anchor" href="#recursos"><span class="octicon octicon-link"></span></a>Recursos</h2>
+
+<ul>
+<li>Campus virtual de la asignatura</li>
+<li><a href="http://ruby-doc.org/">http://ruby-doc.org/</a></li>
+<li><a href="https://www.heroku.com/">https://www.heroku.com/</a></li>
+</ul><p><em>Aarón Socas Gaspar &amp;&amp; Aarón José Vera Cerdeña- Sistemas y Tecnologías Web (Curso 2014-2015)</em></p>
+        </section>
+
+        <footer>
+          Sytw p2 is maintained by <a href="https://github.com/alu0100207385">alu0100207385</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
