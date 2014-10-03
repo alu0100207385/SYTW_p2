@@ -10,6 +10,10 @@ Amigos en Twitter, para más [detalle](https://github.com/alu0100207385/SYTW_p1)
 Añada pruebas. Usar los issues de GitHub para documentar el histórico de desarrollo. 
 
 
+###Despligue en Heroku
+
+Acceda a nuestra [aplicacion](http://sytw2.herokuapp.com/)
+
 ##Instalación
 
 Como en la práctica anterior...

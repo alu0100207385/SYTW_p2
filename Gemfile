@@ -1,8 +1,12 @@
 source 'https://rubygems.org'
-ruby '1.9.3'
+ruby '2.1.0'
 
 gem 'twitter'
 gem "sinatra"
 gem "thin"
 gem "json"
-gem 'rake'
+
+group :test, :development do
+  gem "rack-test"
+  gem "rake"
+end
