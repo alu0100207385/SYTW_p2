@@ -10,14 +10,14 @@ Amigos en Twitter, para más [detalle](https://github.com/alu0100207385/SYTW_p1)
 Añada pruebas. Usar los issues de GitHub para documentar el histórico de desarrollo. 
 
 
-###Despligue en Heroku
+##Despligue en Heroku
 
-Acceda a nuestra [aplicacion](http://sytw2.herokuapp.com/)
+Acceda a nuestra [aplicacion](http://sytw2.herokuapp.com/) .
 
 
-###Travis
+##Travis
 
-Podemos realizar los test de forma local o [remota](https://travis-ci.org/alu0100207385/SYTW_p2/builds/36971131)
+Podemos realizar los test de forma local o ver los resultados en [travis](https://travis-ci.org/alu0100207385/SYTW_p2/builds/36971131) .
 
 ##Instalación
 
